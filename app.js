@@ -10,9 +10,15 @@ ul.addEventListener('click', function(e){
 });
 
 //add book
-const addForm = document.forms['add-book'];
-
+const addForm = document.querySelector('#add-book');
 addForm.addEventListener('submit', function(e){
     e.preventDefault();
-    console.log(e.target.value);
-})
+    const value = addForm.querySelector('input[type="text"]').value;
+    console.log(value);
+});
+
+//createElement
+
+const li = document.createElement(li);
+const bookName = document.createElement(span);
+const deleteBtn = document.createElement(span);
