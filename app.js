@@ -14,11 +14,23 @@ const addForm = document.querySelector('#add-book');
 addForm.addEventListener('submit', function(e){
     e.preventDefault();
     const value = addForm.querySelector('input[type="text"]').value;
-    console.log(value);
+    
+    //createElement
+
+    const li = document.createElement('li');
+    const bookName = document.createElement('span');
+    const deleteBtn = document.createElement('span');
+
+
+    //textContent
+
+    deleteBtn.textContent = 'delete';
+    bookName.textContent = value;
+
+    //append
+
+    li.appendChild(bookName);
+    li.appendChild(deleteBtn);
+    ul.appendChild(li);
 });
 
-//createElement
-
-const li = document.createElement(li);
-const bookName = document.createElement(span);
-const deleteBtn = document.createElement(span);
