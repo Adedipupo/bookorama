@@ -38,3 +38,14 @@ addForm.addEventListener('submit', function(e){
     ul.appendChild(li);
 });
 
+//hide books
+
+const hideBox = document.querySelector('#hide');
+
+hideBox.addEventListener('change', function(e){
+ if (hideBox.checked) {
+     ul.style.display = 'none';
+ } else {
+     ul.style.display = 'block';
+ }
+});
