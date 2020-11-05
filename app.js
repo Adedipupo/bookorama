@@ -1,3 +1,8 @@
-const books = document.querySelector("#book-list");
+const btns = document.querySelectorAll('#book-list .delete');
 
-books.innerHTML = "<h2> Books and more books </h2>"
+Array.from(btns).forEach(function(btn){
+    btn.addEventListener('click',function(e){
+        const li = e.target.parentElement;
+        li.parentNode.removeChild(li);
+    })
+});
