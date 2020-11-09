@@ -51,3 +51,12 @@ hideBox.addEventListener('change', function(e){
 });
 
 const searchBar = document.querySelector('#search-books input');
+searchBar.addEventListener('keyup',function(e){
+    const term = e.target.value.toLowerCase();
+    const books = ul.getElementsByTagName('li');
+
+    Array.from('books').forEach(function(book){
+        const title = books.firstElementChild;
+        console.log(title)
+    })
+})
