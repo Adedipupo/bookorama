@@ -55,8 +55,8 @@ searchBar.addEventListener('keyup',function(e){
     const term = e.target.value.toLowerCase();
     const books = ul.getElementsByTagName('li');
 
-    Array.from('books').forEach(function(book){
-        const title = books.firstElementChild.textContent;
+    Array.from(books).forEach(function(book){
+        const title = book.firstElementChild.textContent;
          if (title.toLowerCase().indexOf(term) != -1) {
              book.style.display = 'block'
          }else{
