@@ -49,3 +49,5 @@ hideBox.addEventListener('change', function(e){
      ul.style.display = 'block';
  }
 });
+
+const searchBar = document.querySelector('#search-books input');
